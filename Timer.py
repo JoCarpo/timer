@@ -6,7 +6,6 @@ m = int(input("How many minutes: "))
 h = int(input("How many hours: "))
 
 sys.stdout.write(f"\r{h}:{m}:{s}")
-sys.stdout.flush()
 time.sleep(1)
 sys.stdout.write("\r            ")
 
@@ -17,14 +16,12 @@ while True:
             sys.stdout.write(f"\r{h}:{m}:{s}")
             time.sleep(1)
             sys.stdout.write("\r            ")
-            sys.stdout.flush()
         elif m > 0:
             m -= 1
             s = 59
             sys.stdout.write(f"\r{h}:{m}:{s}")
             time.sleep(1)
             sys.stdout.write("\r            ")
-            sys.stdout.flush()
         else:
             h -= 1
             m = 59
@@ -32,7 +29,6 @@ while True:
             sys.stdout.write(f"\r{h}:{m}:{s}")
             time.sleep(1)
             sys.stdout.write("\r            ")
-            sys.stdout.flush()
     else:
         print("\rFinished")
         beepy.beep(6)
